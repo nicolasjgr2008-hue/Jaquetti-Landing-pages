@@ -9,50 +9,50 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy ad02 → site-institucional
+      - name: Deploy site-institucional
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/site-institucional/
+          server-dir: /domains/jaquettiagency.com/public_html/site-institucional/
           local-dir: ./deploy/site-institucional/
-
-  deploy-landing-page:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Deploy ad04 → landing-page
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/landing-page/
-          local-dir: ./deploy/landing-page/
-
-  deploy-ecommerce:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Deploy ad07 → e-commerce
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/e-commerce/
-          local-dir: ./deploy/e-commerce/
 
   deploy-autoridade-visual:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy ad09 → autoridade-visual
+      - name: Deploy autoridade-visual
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/autoridade-visual/
+          server-dir: /domains/jaquettiagency.com/public_html/autoridade-visual/
           local-dir: ./deploy/autoridade-visual/
+
+  deploy-ecommerce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy e-commerce
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /domains/jaquettiagency.com/public_html/e-commerce/
+          local-dir: ./deploy/e-commerce/
+
+  deploy-landing-page:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy landing-page
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /domains/jaquettiagency.com/public_html/landing-page/
+          local-dir: ./deploy/landing-page/
