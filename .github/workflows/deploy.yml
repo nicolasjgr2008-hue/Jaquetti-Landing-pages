@@ -15,7 +15,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /domains/jaquettiagency.com/public_html/site-institucional/
+          server-dir: domains/jaquettiagency.com/public_html/site-institucional/
           local-dir: ./deploy/site-institucional/
 
   deploy-autoridade-visual:
@@ -28,7 +28,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /domains/jaquettiagency.com/public_html/autoridade-visual/
+          server-dir: domains/jaquettiagency.com/public_html/autoridade-visual/
           local-dir: ./deploy/autoridade-visual/
 
   deploy-ecommerce:
@@ -41,7 +41,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /domains/jaquettiagency.com/public_html/e-commerce/
+          server-dir: domains/jaquettiagency.com/public_html/e-commerce/
           local-dir: ./deploy/e-commerce/
 
   deploy-landing-page:
@@ -54,5 +54,5 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /domains/jaquettiagency.com/public_html/landing-page/
+          server-dir: domains/jaquettiagency.com/public_html/landing-page/
           local-dir: ./deploy/landing-page/
